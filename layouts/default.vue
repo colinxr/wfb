@@ -1,12 +1,10 @@
 <template>
-  <section class="container xs-text-5 md-text-4">
-    <AppHeader />
-    <div class="mt-10 pt-40 px-2">
-      <slot />
-    </div>
-    <LazySlideOut />
-    <AppFooter />
-  </section>
+  <!-- <main class="container xs-text-5 md-text-4"> -->
+  <AppHeader />
+  <slot />
+  <LazySlideOut />
+  <AppFooter />
+  <!-- </section> -->
 </template>
 
 <script setup>

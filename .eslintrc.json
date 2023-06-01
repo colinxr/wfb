@@ -4,6 +4,7 @@
       "es2021": true
   },
   "extends": [
+    "plugin:prettier/recommended",
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@nuxt/eslint-config",
@@ -41,6 +42,14 @@
       "vue/first-attribute-linebreak": ["error", {
         "singleline": "ignore",
         "multiline": "below"
+      }],
+      "vue/max-attributes-per-line": ["error", {
+        "singleline": {
+          "max": 1
+        },      
+        "multiline": {
+          "max": 1
+        }
       }],
       "comma-dangle": ["error", {
         "arrays": "only-multiline",

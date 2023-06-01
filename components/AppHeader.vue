@@ -4,35 +4,31 @@
       <div class="flex">
         <div class="w-1/3 border-r border-gray-300 p-2">
           <div class="item">
-            <nuxt-link class="sitename" to="/" exact>
+            <nuxt-link class="text-black font-inter uppercase font-extrabold text-18" to="/" exact>
               Working From Bed
             </nuxt-link>
           </div>
         </div>
 
         <div class="w-1/3 p-2 border-r border-gray-300">
-          <div class="item xs-flex">
+          <div class="item font-light text-xs flex items-end">
             <!-- <lazy-wfb-search /> -->
-            search
+            <div>
+              search
+            </div>
           </div>
         </div>
       </div>
     </nav>
 
     <div class="border-b border-gray-300 p-2 text-xs">
-      <!-- <ContentRenderer :value="" /> -->
-      <span v-if="data">
-        {{ data.tagline }}
-      </span>
-      <span v-else>fucking fuck</span>
+      <span> {{ data.tagline }} </span>
     </div>
   </header>
 </template>
 
 <script setup>
-const { data } = await useAsyncData('home', () => queryContent('/').findOne())
-
-console.log(data)
+const { data } = await useAsyncData('home', () => queryContent('/').only('tagline').findOne())
 </script>
 
 <style>
@@ -49,14 +45,6 @@ console.log(data)
 .results li {
   list-style-type: none;
   margin-left: 0;
-}
-
-.sitename {
-  color: #000;
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 18px;
 }
 
 @media only screen and (max-width: 40rem) {
