@@ -5,7 +5,7 @@
         <lazy-wfb-pagination :pagination="pagination" />
       </div> -->
 
-      <div class="w-1/4 px-2 border-b border-r border-gray-300" :class="signupAboutSize">
+      <div class="w-1/4 px-2 border-b border-r border-gray-300">
         <div class="item">
           <div v-if="siteDescription" class="footer__heading xs-mb2">
             About
@@ -59,18 +59,7 @@
 </template>
 
 <script setup>
-// import useMainStore from '~/store/main'
-
-// const store = useMainStore()
-
-const pagination = computed(() => [])
-
 const signupBoolean = computed(() => true)
-
-const signupAboutSize = computed(() => ({
-  'c-25': signupBoolean,
-  'c-4': !signupBoolean,
-}))
 
 const siteDescription = computed(() => 'copy goes here')
 </script>

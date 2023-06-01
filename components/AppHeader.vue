@@ -4,7 +4,7 @@
       <div class="flex">
         <div class="w-1/3 border-r border-gray-300 p-2">
           <div class="item">
-            <nuxt-link class="text-black font-inter uppercase font-extrabold text-18" to="/" exact>
+            <nuxt-link class="text-black tk font-inter uppercase font-extrabold text-[20px]" to="/" exact>
               Working From Bed
             </nuxt-link>
           </div>
@@ -13,9 +13,7 @@
         <div class="w-1/3 p-2 border-r border-gray-300">
           <div class="item font-light text-xs flex items-end">
             <!-- <lazy-wfb-search /> -->
-            <div>
-              search
-            </div>
+            <span> Search </span>
           </div>
         </div>
       </div>
@@ -51,5 +49,10 @@ const { data } = await useAsyncData('home', () => queryContent('/').only('taglin
   .results {
     width: 94vw;
   }
+}
+
+.tk {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 0px
 }
 </style>

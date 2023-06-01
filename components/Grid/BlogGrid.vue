@@ -7,9 +7,9 @@
 <script setup>
 const gridItems = computed(() => {
   const pages = [
-    { title: 'Strategy' },
-    { title: 'Development' },
-    { title: 'Design' },
+    { title: 'Strategy', attribute: 'static' },
+    { title: 'Development', attribute: 'static' },
+    { title: 'Design', attribute: 'static' },
   ]
 
   return [...pages, ...props.posts]
