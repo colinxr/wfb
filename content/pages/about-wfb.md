@@ -1,7 +1,7 @@
 ---
 title: "About Us"
 date: June 1, 2023
-slug: "about"
+slug: "about-wfb"
 ---
 
 Working From Bed is a full-stack digital agency and product lab. Committed to helping new brands, entrepreneurs, artists, creatives grow their online presence. We help guide our clients through every step of the funnel. We're taking what we've learned through our own product wins and losses and using that to our clients' advantage.

@@ -5,8 +5,8 @@
 <script setup>
   const route = useRoute()
 
-  const { data: entry } = await useAsyncData("entry", () =>
-    queryContent("posts").where({ slug: route.params.slug }).findOne()
+  const { data: entry } = await useAsyncData("page", () =>
+    queryContent("pages").where({ slug: route.params.slug }).findOne()
   )
 
   definePageMeta({

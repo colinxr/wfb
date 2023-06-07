@@ -1,7 +1,7 @@
 ---
 title: "Why WFB"
 date: May 31, 2023
-slug: "why"
+slug: "why-wfb"
 ---
 
 The idea of working from bed first came across my desk ten years ago in an interview with comedian John Hodgman. The writer asks Hodgman to describe his workspace, to which he replies:
