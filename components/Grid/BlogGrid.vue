@@ -1,26 +1,38 @@
 <template>
-  <div
-    class="wfb-grid grid grid-cols-2 md:grid-cols-3 grid-cols-[repeat(3_1fr] h-full"
-  >
-    <GridItem v-for="(item, i) in gridItems" :key="i" :data="item" />
-  </div>
+	<div class="h-screen">
+		<div
+			class="wfb-grid grid grid-cols-2 md:grid-cols-3 grid-cols-[repeat(3_1fr] h-full"
+		>
+			<GridItem v-for="(item, i) in gridItems" :key="i" :data="item" />
+		</div>
+	</div>
 </template>
 
 <script setup>
-  const gridItems = computed(() => {
-    const pages = [
-      { title: "Strategy", attribute: "static" },
-      { title: "Development", attribute: "static" },
-      { title: "Design", attribute: "static" },
-    ]
+const { pagination } = usePagination()
 
-    return [...pages, ...props.entries]
-  })
+const gridItems = computed(() => {
+	const pages = [
+		{ title: 'Strategy', attribute: 'static' },
+		{ title: 'Development', attribute: 'static' },
+		{ title: 'Design', attribute: 'static' },
+	]
 
-  const props = defineProps({
-    entries: {
-      type: Array,
-      default: () => [],
-    },
-  })
+	return [...pages, ...props.entries]
+})
+
+onMounted(() => {
+	console.log(pagination)
+	pagination.active = gridItems.length > 2
+	pagination.totalPages = Math.ceil(gridItems.length / 2)
+
+	console.log(pagination)
+})
+
+const props = defineProps({
+	entries: {
+		type: Array,
+		default: () => [],
+	},
+})
 </script>

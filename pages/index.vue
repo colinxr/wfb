@@ -21,7 +21,9 @@ definePageMeta({
 </script>
 
 <template>
-	<div class="mt-[83px] h-screen">
+	<div class="mt-[83px]">
 		<BlogGrid :entries="data" />
+
+		<GridPagination />
 	</div>
 </template>
