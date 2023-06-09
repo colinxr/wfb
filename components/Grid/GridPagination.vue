@@ -1,5 +1,7 @@
 <script setup>
 const { pagination, backUrl, forwardURL } = usePagination()
+const back = ref(backUrl())
+const fwd = ref(forwardURL())
 </script>
 
 <template>
@@ -18,7 +20,7 @@ const { pagination, backUrl, forwardURL } = usePagination()
 			<div class="pagination">
 				<nuxt-link
 					exact
-					:to="backUrl"
+					:to="back"
 					tag="button"
 					class="relative border cursor-pointer border-gray-200 text-blue-500 bg-white float-left transition duration-150 ease-in p-2"
 					:class="{ 'pagination__button--disabled': pagination.page <= 1 }"
@@ -35,7 +37,7 @@ const { pagination, backUrl, forwardURL } = usePagination()
 				</nuxt-link>
 
 				<nuxt-link
-					:to="forwardURL"
+					:to="fwd"
 					tag="button"
 					class="relative cursor-pointer border border-gray-200 text-blue-500 bg-white float-left transition duration-150 ease-in p-2"
 					:class="{

@@ -1,9 +1,16 @@
 <script setup>
 const route = useRoute()
+const { pageTitle } = usePagination()
 
 const { data: entry } = await useAsyncData('page', () =>
 	queryContent('pages').where({ slug: route.params.slug }).findOne()
 )
+
+onMounted(() => {
+	console.log('running')
+	pageTitle.value = entry.value.title
+	console.log(pageTitle.value)
+})
 
 definePageMeta({
 	pageTransition: { name: 'slide-left' },
@@ -20,6 +27,11 @@ definePageMeta({
 
 		to.meta.pageTransition.name = 'slide-left'
 	},
+})
+
+useSeoMeta({
+	title: `${entry.value.title} >> WFB | Working From Bed`,
+	ogTitle: `${entry.value.title} WFB | Working From Bed`,
 })
 </script>
 

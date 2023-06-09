@@ -1,11 +1,16 @@
 <script setup>
-// build breadcrumbs
-// watch route
-// get
+import AppBreadcrumbs from '@/components/AppBreadcrumbs.vue'
+const route = useRoute()
+
+console.log(route)
+const breadcrumbs = computed(() => {})
 
 const { data } = await useAsyncData('home', () =>
 	queryContent('/').only('tagline').findOne()
 )
+const buildBreadcrumbs = () => {
+	if (route.path === '/') return data.tagline
+}
 </script>
 
 <template>
@@ -14,7 +19,7 @@ const { data } = await useAsyncData('home', () =>
 			<div class="md:w-1/3 border-r border-gray-300 p-2">
 				<div class="item">
 					<nuxt-link
-						class="text-black tk font-inter uppercase font-extrabold text-[20px]"
+						class="text-black font-inter uppercase no-underline font-extrabold text-[20px]"
 						to="/"
 						exact
 					>
@@ -24,8 +29,6 @@ const { data } = await useAsyncData('home', () =>
 			</div>
 		</nav>
 
-		<div class="border-b border-gray-300 p-2 text-xs">
-			<span> {{ data.tagline }} </span>
-		</div>
+		<AppBreadcrumbs />
 	</header>
 </template>

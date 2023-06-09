@@ -1,11 +1,21 @@
 <script setup>
 import BlogGrid from '@/components/Grid/BlogGrid.vue'
 
-const route = useRoute()
-
-const { data } = await useAsyncData('pages', () =>
+const { data: pages } = await useAsyncData('pages', () =>
 	queryContent('pages').only(['title', 'slug', '_path']).find()
 )
+
+const { data: posts } = await useAsyncData('posts', () =>
+	queryContent('posts').only(['title', 'slug', '_path']).find()
+)
+
+const entries = computed(() => [
+	{ title: 'Strategy', attribute: 'static' },
+	{ title: 'Development', attribute: 'static' },
+	{ title: 'Design', attribute: 'static' },
+	...pages.value,
+	...posts.value,
+])
 
 definePageMeta({
 	pageTransition: { name: 'slide-left' },
@@ -18,11 +28,22 @@ definePageMeta({
 		to.meta.pageTransition.name = 'slide-left'
 	},
 })
+
+useSeoMeta({
+	title: 'WFB | Working From Bed',
+	ogTitle: 'WFB | Working From Bed',
+	description:
+		'Digital Agency and Product Lab, based in Toronto and Los Angeles',
+	ogDescription:
+		'Digital Agency and Product Lab, based in Toronto and Los Angeles',
+	ogImage: 'https://example.com/image.png',
+	twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
 	<div class="mt-[83px]">
-		<BlogGrid :entries="data" />
+		<BlogGrid :entries="entries" />
 
 		<GridPagination />
 	</div>

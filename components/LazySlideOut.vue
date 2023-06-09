@@ -39,22 +39,28 @@ onClickOutside(target, event => (isOpen.value = false))
 			<li
 				class="wfb-slideout-menu-item menu-logo h-[48px] border-b border-gray-300 flex items-center"
 			>
-				<nuxt-link to="/" exact>
+				<NuxtLink to="/" exact class="no-underline">
 					<h2
 						class="text-black tk font-inter uppercase font-extrabold text-[14px]"
 					>
 						WFB
 					</h2>
-				</nuxt-link>
+				</NuxtLink>
+			</li>
+			<li class="wfb-slideout-menu-item--small">
+				<NuxtLink to="/pages">Pages</NuxtLink>
+			</li>
+			<li class="wfb-slideout-menu-item--small">
+				<NuxtLink to="/posts">Posts</NuxtLink>
 			</li>
 			<li
 				v-for="(p, i) in pages"
 				:key="`pg-${i}`"
 				class="wfb-slideout-menu-item--small"
 			>
-				<nuxt-link :to="p._path">
+				<NuxtLink :to="p._path">
 					{{ p.title }}
-				</nuxt-link>
+				</NuxtLink>
 			</li>
 			<!-- <li v-if="info.menu" class="xs-mt5 wfb-slideout-menu-item heading-font">Links</li>
         <li v-for="m in info.menu" :key="m.position" class="wfb-slideout-menu-item--small">

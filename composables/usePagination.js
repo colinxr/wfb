@@ -4,6 +4,8 @@ const pagination = ref({
 	page: 1,
 })
 
+const pageTitle = ref('')
+
 export default () => {
 	const backUrl = () => {
 		if (pagination.page - 1 == 1 || pagination.page - 1 == 0) return '/'
@@ -15,6 +17,7 @@ export default () => {
 
 	return {
 		pagination,
+		pageTitle,
 		backUrl,
 		forwardURL,
 	}

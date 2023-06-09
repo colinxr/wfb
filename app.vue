@@ -5,6 +5,9 @@
 </template>
 
 <style>
+a {
+	@apply text-blue-700 decoration-blue-700 underline underline-offset-1;
+}
 .slide-left-enter,
 .slide-right-leave-active {
 	transform: translate(50%, 0);
