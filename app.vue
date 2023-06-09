@@ -9,28 +9,28 @@
 .slide-right-leave-active {
 	transform: translate(50%, 0);
 	opacity: 0;
-	transition: all 0.25s;
+	transition: all 0.15s;
 }
 
 .slide-left-leave-active,
 .slide-right-enter {
 	transform: translate(-50%, 0);
 	opacity: 0;
-	transition: all 0.25s;
+	transition: all 0.15s;
 }
 
 .slide-down-enter,
 .slide-up-leave-active {
 	transform: translate(0, 50%);
 	opacity: 1;
-	transition: all 0.25s;
+	transition: all 0.15s;
 }
 
 .slide-down-leave-active,
 .slide-up-enter {
 	transform: translate(0, -50%);
 	opacity: 1;
-	transition: all 0.25s;
+	transition: all 0.15s;
 }
 
 .fade-enter-active,

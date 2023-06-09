@@ -2,54 +2,56 @@
 const signupBoolean = computed(() => true)
 
 const siteDescription = computed(() => 'copy goes here')
+
+const year = ref(new Date().getFullYear())
 </script>
 
 <template>
-	<footer class="bg-gray-100 py-10">
-		<div class="flex no-gap">
-			<!-- <div v-if="pagination.active" class="c-12 xs-text-left xs-p2">
-        <lazy-wfb-pagination :pagination="pagination" />
-      </div> -->
-
-			<div class="w-1/4 px-2 border-b border-r border-gray-300">
+	<footer class="bg-gray-100">
+		<div class="md:flex no-gap">
+			<div class="w-full md:w-1/3 p-5 border-b border-r border-gray-300">
 				<div class="item">
-					<div v-if="siteDescription" class="footer__heading xs-mb2">About</div>
-					<p v-if="siteDescription">
-						{{ siteDescription }}
-					</p>
+					Digital agency and product lab, based in Toronto and Los Angeles.
 				</div>
 			</div>
 
-			<div class="w-1/4 px-2 border-b border-r border-gray-300">
-				<div class="footer__heading xs-mb2">email</div>
-				<!-- <lazy-send-grid /> -->
-				test
-			</div>
-
-			<div class="w-1/4 px-2 border-b border-r border-gray-300">
+			<div class="w-full md:w-1/3 p-5 border-b border-r border-gray-300">
 				<div class="item">
-					<div class="footer__heading xs-mb2">Connect</div>
-					<!-- <ul v-if="connectData" class="list-unstyled">
-            <li v-for="(c, i) in connectData" :key="i">
-              <a :href="c.url">{{ c.name }}</a>
-            </li>
-          </ul> -->
+					<ul class="list-unstyled">
+						<li class="mb-2">
+							<a
+								class="text-blue-700 decoration-blue-700 underline underline-offset-1"
+								href="mailto:contact@workingfrombed.org"
+								target="_blank"
+								>contact@workingfrombed.org</a
+							>
+						</li>
+						<li class="mb-2">
+							TW:
+							<a
+								class="text-blue-700 decoration-blue-700 underline underline-offset-1"
+								href="//twitter.com/workingfrombed"
+								target="_blank"
+								>@workingfrombed</a
+							>
+						</li>
+						<li class="mb-2">
+							IG:
+							<a
+								class="text-blue-700 decoration-blue-700 underline underline-offset-1"
+								href="//instagram.com/workingfrombedzzz"
+								target="_blank"
+								>@workingfrombedzzz</a
+							>
+						</li>
+					</ul>
 				</div>
 			</div>
 
-			<div class="w-1/4 px-2 border-b border-r border-gray-300">
+			<div class="w-full md:w-1/3 p-5 border-b border-r border-gray-300">
 				<div class="item">
-					<div class="footer__heading xs-mb2">Deploy</div>
-					deploy
-					<!-- <a
-            href="https://app.netlify.com/start/deploy?repository=https://github.com/jake-101/wfb-template"
-          >
-            <img
-              style="height:29px;width:auto;"
-              src="~/assets/deploy.svg"
-              title="Deploy to Netlify"
-            />
-          </a> -->
+					<!-- <div class="footer__heading xs-mb2">Deploy</div> -->
+					&copy; Working From Bed, {{ year }}
 				</div>
 			</div>
 		</div>
