@@ -12,10 +12,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss'
   ],
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true
-  //   }
-  // },
-  ssr: false,
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
+  },
+
 })
