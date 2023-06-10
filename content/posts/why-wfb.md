@@ -13,7 +13,7 @@ The idea of working from bed first came across my desk ten years ago in an inter
 
 I dismissed this outright. Working from bed I thought was indulgent and frivolous, fundamentally unserious. Hodgman, the comedian, after all, was fundamentally unserious himself. But there is, in fact, a long-standing history of working lying down. Frida Khalo and Winston Churchill are two well known recumbent movers and shakers. And the author Truman Capote was quoted as saying “I am a completely horizontal author. I can’t think unless I’m lying down.”
 
-Even Arianna Huffington, noted sleep advocate, admitted to the practise in an piece by Taylor Lorenz, titled "Working From Bed Is Acutally Great."
+Even Arianna Huffington, noted sleep advocate, admitted to the practise in an piece by Taylor Lorenz, titled "Working From Bed Is Actually Great."
 
 ++ [Working From Bed Is Actually Great | New York Times](https://www.nytimes.com/2020/12/31/style/working-from-bed.html?smid=nytcore-ios-share&referringSource=articleShare){:target="\_blank"}
 
@@ -21,7 +21,7 @@ My relationship to work was grounded in a protestant ethic. Hard work was good a
 
 But then the pandemic happened, and slowly that relationship was forced to change. Despite the convenience of working at home, the daily routine became a slog, draining and pointless. I was burnt out.
 
-So I don’t know when exactly I started working from bed. But it has become such a welcome adjustment, a kind of self-care. It represents a new kind of work, more inclusive and kind.
+So I don’t know when exactly I started working from bed. But it has become such a welcome adjustment, a form of self-care. It represents a new sort of work, more inclusive and kind.
 
 The pandemic of course accelerated all of this. It served to rip away the age-old aesthetics of work, which has allowed us take up newer, more comfy, postures.
 

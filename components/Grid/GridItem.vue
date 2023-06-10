@@ -10,7 +10,7 @@
 
       <nuxt-link
         v-else
-        class="xs-text-center text-blue-700 decoration-blue-700 underline underline-offset-1 xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
+        class="xs-text-center xs-flex xs-full-height xs-flex-align-center xs-flex-justify-center xs-text-center"
         :to="data._path"
       >
         {{ data.title }}
