@@ -56,13 +56,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Static HTML export with Nuxt
-        run: npm run generate
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        run: yarn generate
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./output/public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .output/public
 
   # Deployment job
   deploy:
