@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-    }
+    },
+    baseURL: "/wfb"
   },
   css: ['@/assets/css/tailwind.css', '@/assets/css/grid.css', '@/assets/css/content.scss'],
   modules: [
@@ -16,5 +17,5 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
-  ssr: true
+  ssr: true,
 })
