@@ -39,6 +39,7 @@ jobs:
         with:
           node-version: '16'
           cache: npm
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
@@ -47,23 +48,21 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
-      - name: Restore cache
-        uses: actions/cache@v3
+
+      - name: Generate static Nuxt 3 files
+        uses: actions/setup-node@v3
         with:
-          path: |
-            .output/public
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
-          restore-keys: |
-            ${{ runner.os }}-nuxt-build-
-      - name: Install dependencies
-        run: yarn install
-      - name: Static HTML export with Nuxt
-        run: yarn generate
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+          node-version: '16'
+          cache: 'yarn'
+
+      - run: |
+          yarn install
+          yarn generate
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .output/public
+          folder: ${{env.BUILD_FOLDER}}
 
   # Deployment job
   deploy:
