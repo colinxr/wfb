@@ -30,7 +30,7 @@ const year = ref(new Date().getFullYear())
 							TW:
 							<a
 								class="text-blue-700 decoration-blue-700 underline underline-offset-1"
-								href="//twitter.com/workingfrombed"
+								href="https://twitter.com/workingfrombed"
 								target="_blank"
 								>@workingfrombed</a
 							>
@@ -39,7 +39,7 @@ const year = ref(new Date().getFullYear())
 							IG:
 							<a
 								class="text-blue-700 decoration-blue-700 underline underline-offset-1"
-								href="//instagram.com/workingfrombedzzz"
+								href="https://instagram.com/workingfrombedzzz"
 								target="_blank"
 								>@workingfrombedzzz</a
 							>

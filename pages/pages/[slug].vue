@@ -6,11 +6,7 @@ const { data: entry } = await useAsyncData('page', () =>
 	queryContent('pages').where({ slug: route.params.slug }).findOne()
 )
 
-onMounted(() => {
-	console.log('running')
-	pageTitle.value = entry.value.title
-	console.log(pageTitle.value)
-})
+onMounted(() => (pageTitle.value = entry.value.title))
 
 definePageMeta({
 	pageTransition: { name: 'slide-left' },

@@ -2,7 +2,6 @@
 import AppBreadcrumbs from '@/components/AppBreadcrumbs.vue'
 const route = useRoute()
 
-console.log(route)
 const breadcrumbs = computed(() => {})
 
 const { data } = await useAsyncData('home', () =>
