@@ -1,0 +1,1 @@
+import{C as e}from"./entry.e71c7b32.js";const a=e({active:!1,totalPages:1,page:1}),t=e(""),s=()=>({pagination:a,pageTitle:t,backUrl:()=>a.page-1==1||a.page-1==0?"":`?p=${a.page-1}`,forwardURL:()=>`?p=${a.page+1}`});export{s as u};
