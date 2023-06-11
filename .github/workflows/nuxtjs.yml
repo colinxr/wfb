@@ -43,7 +43,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Nuxt Genereate
+      - name: Nuxt Generate
         run: yarn generate
 
       - name: Upload artifact
@@ -66,11 +66,11 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: dist
-          path: /artifact
+          path: .
       - uses: actions/configure-pages@v1
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: /aritfact
+          path: .
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
