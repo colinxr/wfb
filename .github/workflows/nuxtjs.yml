@@ -48,9 +48,11 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
       - name: Install dependencies
-        run: yarn install --production
+        run: yarn install
+
       - name: Static HTML export with Nuxt
         run: yarn generate
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
