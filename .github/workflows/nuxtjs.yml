@@ -45,29 +45,7 @@ jobs:
 
       - name: Nuxt Generate
         run: yarn generate
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          name: dist
-          path: .output/public
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-    steps:
-      - uses: actions/download-artifact@master
-        with:
-          name: dist
-          path: .
-      - uses: actions/configure-pages@v1
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          folder: .output/public # The folder the action should deploy.
