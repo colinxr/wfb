@@ -63,6 +63,14 @@ jobs:
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
     steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: /artifact
+      - uses: actions/configure-pages@v1
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: /aritfact
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
