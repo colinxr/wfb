@@ -24,7 +24,7 @@ watch(breadCrumbStyle, newValue => {
 
 <template>
 	<div class="border-b border-gray-300 p-2 text-xs capitalize">
-		<span v-if="breadCrumbStyle === 'home'">{{ data.tagline }}</span>
+		<span v-if="breadCrumbStyle === 'home' && data">{{ data.tagline }}</span>
 
 		<template v-if="breadCrumbStyle === 'landing-page'">
 			<NuxtLink to="/">Home</NuxtLink> /
