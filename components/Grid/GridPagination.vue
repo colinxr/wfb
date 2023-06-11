@@ -23,7 +23,9 @@ const fwd = ref(forwardURL())
 					:to="back"
 					tag="button"
 					class="relative border cursor-pointer border-gray-200 text-blue-500 bg-white float-left transition duration-150 ease-in p-2"
-					:class="{ 'pagination__button--disabled': pagination.page <= 1 }"
+					:class="{
+						'pagination__button--disabled opacity-20': pagination.page <= 1,
+					}"
 				>
 					<svg
 						class="pagination__button--prev-icon w-[20px] h-[20px]"
@@ -41,7 +43,7 @@ const fwd = ref(forwardURL())
 					tag="button"
 					class="relative cursor-pointer border border-gray-200 text-blue-500 bg-white float-left transition duration-150 ease-in p-2"
 					:class="{
-						'pagination__button--disabled':
+						'pagination__button--disabled opacity-20':
 							pagination.page >= pagination.totalPages,
 					}"
 				>
