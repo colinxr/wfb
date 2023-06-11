@@ -1,7 +1,6 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "engines": { "node": "17.x" },
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
