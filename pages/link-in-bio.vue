@@ -19,7 +19,7 @@ definePageMeta({
 			<NuxtLink to="/posts/why-wfb">
 				<li>
 					<h2>Why Work From Bed</h2>
-					<span>Why work from bed tk tk tkt</span>
+					<span>"I can’t think unless I’m lying down." — Truman Capote</span>
 				</li>
 			</NuxtLink>
 
