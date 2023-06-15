@@ -37,7 +37,7 @@ onClickOutside(target, event => (isOpen.value = false))
 
 		<ul class="wfb-slideout-menu list-unstyled">
 			<li
-				class="wfb-slideout-menu-item menu-logo h-[48px] border-b border-gray-300 flex items-center"
+				class="wfb-slideout-menu-item menu-logo h-[50px] border-b border-gray-300 flex items-center"
 			>
 				<NuxtLink to="/" exact class="no-underline">
 					<h2
@@ -219,7 +219,6 @@ onClickOutside(target, event => (isOpen.value = false))
 
 .wfb-slideout-menu-item--small a {
 	cursor: pointer;
-	border-top: 1px solid #666;
 	display: block;
 	padding: 0.5rem 0.3rem;
 

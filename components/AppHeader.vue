@@ -1,5 +1,11 @@
 <script setup>
 import AppBreadcrumbs from '@/components/AppBreadcrumbs.vue'
+
+const props = defineProps({
+	showCrumbs: {
+		default: true,
+	},
+})
 </script>
 
 <template>
@@ -18,6 +24,6 @@ import AppBreadcrumbs from '@/components/AppBreadcrumbs.vue'
 			</div>
 		</nav>
 
-		<AppBreadcrumbs />
+		<AppBreadcrumbs v-show="props.showCrumbs" />
 	</header>
 </template>
