@@ -15,6 +15,10 @@ const breadCrumbStyle = computed(() => {
 	return 'entry'
 })
 
+onMounted(() => {
+	parentName.value = route.name.replace('-slug', '')
+})
+
 watch(breadCrumbStyle, newValue => {
 	if (newValue !== 'entry') return null
 

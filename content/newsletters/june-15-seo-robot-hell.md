@@ -1,9 +1,10 @@
 ---
-title: 'June 15 | A Storefront for the Robots'
+title: 'A Storefront for the Robots'
+date: 'June 15, 2023'
 slug: 'june-15-seo-robot-hell'
 ---
 
-## A Storefront for the Roboots | The Verge
+## 1. A Storefront for the Robots | The Verge
 
 "The SEO arms race has left Google and the web drowning in garbage text, with customers and businesses flailing to find each other."
 
@@ -13,9 +14,9 @@ This story from Mia Sato at the Verge is fascinating and really sums up the long
 
 ++ [A Storefront for the Roboots | The Verge ](https://www.theverge.com/23753963/google-seo-shopify-small-business-ai)
 
-### Also from the Verge -- [Google is getting a lot worse because of the Reddit Blackouts](https://www.theverge.com/2023/6/13/23759942/google-reddit-subreddit-blackout-protests)
+**_ Also from the Verge: [Google is getting a lot worse because of the Reddit Blackouts](https://www.theverge.com/2023/6/13/23759942/google-reddit-subreddit-blackout-protests) _**
 
-## "Just as we’ve strewn the oceans with plastic trash and filled the atmosphere with carbon dioxide, so we’re about to fill the Internet with blah."
+## 2. "Just as we’ve strewn the oceans with plastic trash and filled the atmosphere with carbon dioxide, so we’re about to fill the Internet with blah."
 
 As AI generated content fills up the online space, whether to produce SEO-ified product descriptions (see above), or public apologies, existing models will run out of human made data from which to learn.
 
