@@ -10,12 +10,12 @@ definePageMeta({
 		class="mt-[63px] h-screen flex justify-center md:items-center pt-10 md:pt-0"
 	>
 		<ul class="md:max-w-1/3">
-			<a href="tk.com">
+			<!-- <a href="https://workingfrombed.substack.com/">
 				<li>
 					<h2>Working From Bed Newsletter</h2>
 					<span>Monthly-ish emails no spam just love. </span>
 				</li>
-			</a>
+			</a> -->
 			<NuxtLink to="/posts/why-wfb">
 				<li>
 					<h2>Why Work From Bed</h2>
