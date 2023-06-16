@@ -13,18 +13,6 @@ const { data: entries } = await useAsyncData('posts', () =>
 	queryContent(props.contentType).only(['title', 'slug', '_path']).find()
 )
 
-definePageMeta({
-	pageTransition: { name: 'slide-left' },
-	middleware(to, from) {
-		if (+to.query.page > +from.query.page) {
-			to.meta.pageTransition.name = 'slide-right'
-			return
-		}
-
-		to.meta.pageTransition.name = 'slide-left'
-	},
-})
-
 useSeoMeta({
 	title: `${props.contentType} >> WFB | Working From Bed`,
 	ogTitle: `${props.contentType} >> WFB | Working From Bed`,
