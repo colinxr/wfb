@@ -9,13 +9,15 @@ const props = defineProps({
 	},
 })
 
+const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1)
+
 const { data: entries } = await useAsyncData('posts', () =>
 	queryContent(props.contentType).only(['title', 'slug', '_path']).find()
 )
 
 useSeoMeta({
-	title: `${props.contentType} >> WFB | Working From Bed`,
-	ogTitle: `${props.contentType} >> WFB | Working From Bed`,
+	title: `${capitalize(props.contentType)} >> WFB | Working From Bed`,
+	ogTitle: `${capitalize(props.contentType)} >> WFB | Working From Bed`,
 })
 </script>
 
