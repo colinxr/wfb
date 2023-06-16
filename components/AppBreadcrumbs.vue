@@ -27,17 +27,19 @@ watch(breadCrumbStyle, newValue => {
 </script>
 
 <template>
-	<div class="border-b border-gray-300 p-2 text-xs capitalize">
+	<div class="border-b border-gray-300 p-2 text-xs">
 		<span v-if="breadCrumbStyle === 'home' && data">{{ data.tagline }}</span>
 
 		<template v-if="breadCrumbStyle === 'landing-page'">
 			<NuxtLink to="/">Home</NuxtLink> /
-			<span class="titlecase">{{ route.name }}</span>
+			<span class="titlecase capitalize">{{ route.name }}</span>
 		</template>
 
 		<template v-if="breadCrumbStyle === 'entry'">
 			<NuxtLink to="/">Home</NuxtLink> /
-			<NuxtLink :to="`/${parentName}`">{{ parentName }}</NuxtLink>
+			<NuxtLink class="capitalize" :to="`/${parentName}`">{{
+				parentName
+			}}</NuxtLink>
 			/ <span>{{ pageTitle }}</span>
 		</template>
 	</div>
