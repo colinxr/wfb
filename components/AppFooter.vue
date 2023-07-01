@@ -10,9 +10,7 @@ const year = ref(new Date().getFullYear())
 	<footer class="bg-gray-100">
 		<div class="md:flex no-gap">
 			<div class="w-full md:w-1/3 p-5 border-b border-r border-gray-300">
-				<div class="item">
-					Digital agency and product lab, based in Toronto and Los Angeles.
-				</div>
+				<div class="item">Smart, Thoughtful and Stylish.</div>
 			</div>
 
 			<div class="w-full md:w-1/3 p-5 border-b border-r border-gray-300">
