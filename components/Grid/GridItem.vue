@@ -1,9 +1,9 @@
 <template>
 	<div
-		class="p-2 border-l-0 border-t-0 border border-grey-300 flex justify-center items-center"
+		class="p-4 border-l-0 border-t-0 border border-grey-300 flex justify-center items-center"
 		:style="`transition-delay:0.${key * 0.5}s`"
 	>
-		<div class="">
+		<div class="text-center">
 			<span v-if="isStatic">
 				{{ data.title }}
 			</span>

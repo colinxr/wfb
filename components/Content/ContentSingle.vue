@@ -15,18 +15,21 @@ const { data: entry } = await useAsyncData('entry', () =>
 	queryContent(props.contentType).where({ slug: route.params.slug }).findOne()
 )
 
+console.log(entry)
+
 onMounted(() => (pageTitle.value = entry.value.title))
 
 definePageMeta({
 	pageTransition: { name: 'slide-left' },
 })
 
-useSeoMeta({
-	title: `${entry.value.title} >> WFB | Working From Bed`,
-	ogTitle: `${entry.value.title} WFB | Working From Bed`,
-})
+// useSeoMeta({
+// 	title: `${entry.value.title} >> WFB | Working From Bed`,
+// 	ogTitle: `${entry.value.title} WFB | Working From Bed`,
+// })
 </script>
 
 <template>
-	<EntryLayout :entry="entry" />
+	<EntryLayout v-if="entry" :entry="entry" />
+	<div v-else>404</div>
 </template>

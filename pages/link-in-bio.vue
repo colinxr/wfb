@@ -9,13 +9,18 @@ definePageMeta({
 	<div
 		class="mt-[63px] h-screen flex justify-center md:items-center pt-10 md:pt-0"
 	>
-		<ul class="md:max-w-1/3">
-			<!-- <a href="https://workingfrombed.substack.com/">
+		<ul class="md:w-1/3">
+			<NuxtLink to="/newsletters/july-1-seo-robot-hell">
 				<li>
-					<h2>Working From Bed Newsletter</h2>
-					<span>Monthly-ish emails no spam just love. </span>
+					<h2>A Storefront for the Robots: What We're Reading This Month</h2>
+					<span
+						>The SEO arms race has left Google and the web drowning in garbage
+						text, with customers and businesses flailing to find each
+						other.</span
+					>
 				</li>
-			</a> -->
+			</NuxtLink>
+
 			<NuxtLink to="/posts/why-wfb">
 				<li>
 					<h2>Why Work From Bed</h2>
@@ -23,9 +28,16 @@ definePageMeta({
 				</li>
 			</NuxtLink>
 
+			<a href="https://workingfrombed.substack.com/" target="_blank">
+				<li>
+					<h2>WFB on Substack</h2>
+					<span>Sign up for the Monthly-ish emails. No spam just love. </span>
+				</li>
+			</a>
+
 			<NuxtLink to="/">
 				<li>
-					<h2>home page</h2>
+					<h2>Go Home</h2>
 				</li>
 			</NuxtLink>
 		</ul>
