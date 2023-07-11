@@ -12,11 +12,11 @@ const props = defineProps({
 		class="h-full max-w-[780px] mx-5 md:ml-[60px] lg:ml-[80px] md:mr-0 mt-[125px] pb-[160px]"
 	>
 		<div class="item xs-block xs-full-height" a>
-			<lazy-featured-image
+			<!-- <lazy-featured-image
 				v-if="entry.thumbnail"
 				:title="entry.title"
 				:thumbnail="entry.thumbnail"
-			/>
+			/> -->
 
 			<header class="mb-10">
 				<h1 class="main-title">{{ entry.title }}</h1>

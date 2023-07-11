@@ -15,7 +15,7 @@ const breadCrumbStyle = computed(() => {
 	return 'entry'
 })
 
-onMounted(() => {
+onBeforeMount(() => {
 	parentName.value = route.name.replace('-slug', '')
 })
 
@@ -37,10 +37,12 @@ watch(breadCrumbStyle, newValue => {
 
 		<template v-if="breadCrumbStyle === 'entry'">
 			<NuxtLink to="/">Home</NuxtLink> /
-			<NuxtLink class="capitalize" :to="`/${parentName}`">{{
-				parentName
-			}}</NuxtLink>
-			/ <span>{{ pageTitle }}</span>
+			<template v-if="parentName">
+				<NuxtLink class="capitalize" :to="`/${parentName}`">{{
+					parentName
+				}}</NuxtLink>
+				/ <span>{{ pageTitle }}</span>
+			</template>
 		</template>
 	</div>
 </template>

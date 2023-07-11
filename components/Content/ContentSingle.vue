@@ -15,13 +15,7 @@ const { data: entry } = await useAsyncData('entry', () =>
 	queryContent(props.contentType).where({ slug: route.params.slug }).findOne()
 )
 
-console.log(entry)
-
 onMounted(() => (pageTitle.value = entry.value.title))
-
-definePageMeta({
-	pageTransition: { name: 'slide-left' },
-})
 
 // useSeoMeta({
 // 	title: `${entry.value.title} >> WFB | Working From Bed`,
