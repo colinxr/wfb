@@ -131,7 +131,7 @@ deploy:
         script: |
           export ROOT_DIR=$ROOT_DIR
           export RELEASE_DIR=$RELEASE_DIR
-          tar -xzf $RELEASE_DIR/.output.tar.gz
+          tar -xzf $RELEASE_DIR/.output.tar.gz -C $RELEASE_DIR/
           rm -rf /var/www/app-root/web/current
           ln -s $RELEASE_DIR /var/www/app-root/web/current
           cd /var/www/app-root/web/current
@@ -199,7 +199,7 @@ The final step is to prepare the code for release.
     script: |
       export ROOT_DIR=$ROOT_DIR
       export RELEASE_DIR=$RELEASE_DIR
-      tar -xzf $RELEASE_DIR/.output.tar.gz
+      tar -xzf $RELEASE_DIR/.output.tar.gz -C $RELEASE_DIR/
       rm -rf /var/www/app-root/web/current
       ln -s $RELEASE_DIR /var/www/app-root/web/current
       cd /var/www/app-root/web/current
